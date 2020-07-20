@@ -110,3 +110,30 @@ function rpsFrontEnd(humanImageChoice, botImageChoice, finalMessage){
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
 
 }
+
+//Challenge 3: Blackjack
+
+let BlackjackGame = {
+    'you' : {
+        'scoreSpan': '#your-blackjack-result',
+        'div': '#your-box',
+        'score': 0
+    },
+    'dealer' : {
+        'scoreSpan': '#dealer-blackjack-result',
+        'div': '#dealer-box',
+        'score': 0
+    }
+}
+
+const YOU = BlackjackGame['you'];
+const DEALER = BlackjackGame['dealer'];
+
+document.querySelector('#blackjack-hit-button').addEventListener("click", blackjackHit);
+
+function blackjackHit(){
+    let cardImage = document.createElement('img');
+    cardImage.src = "../images/Cards/Q.png";
+    console.log(cardImage);
+    document.querySelector(YOU['div']).appendChild(cardImage);
+}
